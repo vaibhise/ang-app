@@ -1,0 +1,22 @@
+.navbar {
+  background-color: #364245;
+  border-radius: 0 0 10px 10px;
+
+  li {
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.navbar-right {
+  margin-right: -30px;
+
+  li {
+    border-radius: 0 0 8px 0;
+
+    &:last-child {
+      background-color: #f37324;
+    }
+  }
+}
