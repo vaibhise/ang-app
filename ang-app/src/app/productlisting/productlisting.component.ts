@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as _ from 'underscore';
 
 @Component({
   selector: 'app-productlisting',
@@ -61,6 +62,9 @@ export class ProductlistingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var prodSort = _.sortBy(this.rideGear, 'prodName');
+    this.rideGear = prodSort;
+
   }
 
 }
