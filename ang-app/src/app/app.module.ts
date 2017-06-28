@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -20,6 +21,7 @@ import { ProductlistingComponent } from './productlisting/productlisting.compone
     ProductlistingComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule
   ],
   providers: [],
