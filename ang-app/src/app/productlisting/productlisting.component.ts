@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'underscore';
-import { Observable } from 'rxjs/Rx';
+import 'rxjs/Rx';
 
 import { ApiServicesService } from '../services/api-services.service';
 
@@ -14,16 +14,16 @@ export class ProductlistingComponent implements OnInit {
 
   constructor(private apiServices: ApiServicesService) { }
 
+  public rideGear = [];
+
   ngOnInit() {
-    //var prodSort = _.sortBy(this.rideGear, 'prodName');
-    // this.rideGear = prodSort;
+    console.log(1);
+    this.getProtectionBenefits();
   }
 
-  getProtectionBenefits(): Observable<any> {
-    return this.apiServices.getBenefits().map(
-      res => {
-        return res;
-      }
+  getProtectionBenefits() {
+    this.apiServices.getBenefits().subscribe(
+      (data) => this.rideGear = data
     );
   }
 
